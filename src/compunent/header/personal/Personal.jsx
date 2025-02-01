@@ -47,11 +47,7 @@ const Personal = ({ show, check }) => {
                     {snap.items.length}
                 </span>
             </Link>
-            <span className="cursor-pointer relative mx-1 hover:scale-110 transition-all hidden lg:inline-flex" >
-                <IoPersonOutline size={25}
-                    className={`${fixed || check ? "text-cyan-800" : "text-white"}`} />
 
-            </span>
             <span className="cursor-pointer relative mx-1 hover:scale-110 transition-all inline-flex"
                 onClick={show}
             >

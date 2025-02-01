@@ -4,13 +4,13 @@ const SearchRespunse = ({ search, hide }) => {
     if (search.length < 3) {
         return
     }
-    let result = data.product.filter(e => e.titel.includes(search)).map((e, i) => <Link
+    let result = data.product.filter(e => e.titel.toLowerCase().includes(search.toLowerCase())).map((e, i) => <Link
         to={`/item/${e.id}`}
         key={i}
         onClick={hide}
         className='flex h-[80px] w-full px-5 py-1 my-1 border-b border-b-gray-300'
     >
-        <img src={e.imgs[0]} alt='poduct-image' className='h-full rounded-md' />
+        <img src={e.imgs[0]} alt='poduct-image' className='h-full w-[100px] rounded-md' />
         <div className='px-3 flex-1 flex flex-col justify-between py-1'>
             <h1 className='text-[15px] line-clamp-1'>{e.titel}</h1>
             <div className='w-full'>
